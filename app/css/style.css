@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+body header {
+  height: 86px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #34383C;
+}
+
+body header .logo-holder {
+  margin-left: 47px;
+  margin-right: auto;
+}
+
+body header .logo-holder .einna-logo {
+  margin-bottom: 10px;
+}
+
+body header i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 250%;
+  padding: 0 20px;
+}
+
+body header .user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 286px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1E2327;
+}
+
+body header .user-menu img {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+body header .user-menu a {
+  color: white;
+  padding: 10px;
+}
+
+body .side-bar {
+  width: 132px;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #4D5F84;
+}
+
+body .side-bar ul li a {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  height: 102px;
+}
+
+body .side-bar ul li a i {
+  font-size: 280%;
+  padding: 6px;
+}
+
+body .side-bar ul li:focus-within a {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+body .side-bar ul li:hover a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
