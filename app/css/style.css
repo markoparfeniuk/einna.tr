@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,10 +12,14 @@ body {
 }
 
 body header {
+  z-index: 999;
+  top: 0;
+  position: fixed;
   height: 86px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,8 +73,10 @@ body header .user-menu a {
 }
 
 body .side-bar {
+  z-index: 999;
   width: 132px;
   height: 100%;
+  top: 86px;
   position: fixed;
   text-align: center;
   font-size: 13px;
@@ -99,5 +105,168 @@ body .side-bar ul li:focus-within a {
 
 body .side-bar ul li:hover a {
   color: white;
+}
+
+body .main {
+  top: 86px;
+  position: relative;
+  left: 132px;
+  width: calc(100% - 132px);
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .main .top-bar {
+  height: 86px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  background-color: #FFFF;
+}
+
+body .main .top-bar label {
+  padding: 0 42px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #6C757E;
+}
+
+body .main .top-bar .reportBox {
+  width: 286px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  background-color: #FAFAFA;
+  font-size: 24px;
+}
+
+body .main .top-bar .reportBox a {
+  padding-left: 21px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+body .main .graphContainer {
+  margin: 33px 40px;
+}
+
+body .main .graphContainer .top {
+  width: 100%;
+  padding-bottom: 33px;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: 1fr 1fr 3fr;
+      grid-template-columns: 1fr 1fr 3fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 33px 40px;
+}
+
+body .main .graphContainer .top :nth-child(3) {
+  grid-row: span 2;
+}
+
+body .main .graphContainer .top :nth-child(4) {
+  grid-column: span 2;
+}
+
+body .main .graphContainer .bottom {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 39px;
+}
+
+body .main .graphContainer .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #FFFF;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+body .main .graphContainer .box canvas {
+  width: 100%;
+  height: 100%;
+}
+
+body .main .graphContainer .box .indContainer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  padding: 0 12px;
+}
+
+body .main .graphContainer .box .indContainer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .graphContainer .box .indContainer div .indLabel {
+  width: 296px;
+}
+
+body .main .graphContainer .box .indContainer div .indLabel i {
+  color: #6C757E;
+  vertical-align: middle;
+  font-size: 200%;
+}
+
+body .main .graphContainer .box .indContainer div .indValue {
+  color: #6C757E;
+}
+
+body .main .graphContainer .box .indContainer div progress {
+  width: 100%;
+  height: 12px;
+  padding: 0 15px;
+  -webkit-appearance: none;
+}
+
+body .main .graphContainer .box .indContainer div progress::-webkit-progress-bar {
+  background: #DDE8ED;
+}
+
+body .main .graphContainer .box .indContainer div progress::-webkit-progress-value {
+  background: -webkit-gradient(linear, left top, right top, from(#f04c38), to(#4dcfa8));
+  background: linear-gradient(left, #f04c38, #4dcfa8);
 }
 /*# sourceMappingURL=style.css.map */

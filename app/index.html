@@ -9,8 +9,12 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Script -->
+    <!-- Scripts -->
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <!-- gauge chart -->
+    <!-- <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+    <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script> -->
 </head>
 <body>
     <header id="h1">
@@ -21,11 +25,10 @@
         <a href="#"><i class='bx bx-search'></i></a>
         <div class="user-menu">
             <img src="img/Navigation/User/Avatar/Clip.svg"></img>
-            <a href="#">
-                Dux Nguyen
-            </a>
+            <a href="#">Dux Nguyen</a>
         </div>
     </header>
+    
     <div class="side-bar">
         <ul>
             <li><a href="#" id="btn_Dashboard"><i class='bx bx-tachometer' ></i></br>Dashboard</a></li>
@@ -35,5 +38,73 @@
             <li><a href="#"><i class='bx bxs-user' ></i></br>My Account</a></li>
         </ul>
     </div>
+    
+    <div class="main">
+        <div class="top-bar">
+            <label>Dashboard</label>
+            <div class="reportBox">
+                <img src="img/Dashboard/ic_Report_file.png.svg"></img>
+                <a href="#">Report file</a>
+            </div>
+        </div>
+        
+        <div class="graphContainer">
+            <div class="top">
+                <div class="box">
+                    <canvas id="businessChart"></canvas>
+                </div>
+                <div class="box">
+                </div>
+                <div class="box">
+                    <canvas id="activityChart"></canvas>
+                </div>
+                <div class="box">
+                    <div class="indContainer">
+                        <div>
+                            <span class="indLabel">
+                                <i class='bx bxs-cog'></i>
+                                Technology
+                            </span>
+                            <progress value='7' max='10'></progress>
+                            <span class="indValue">7/10</span>
+                        </div>
+                        <div>
+                            <span class="indLabel">
+                                <i class='bx bx-body'></i>
+                                Accessability
+                            </span>
+                            <progress  value='5' max='10'></progress>
+                            <span class="indValue">5/10</span>
+                        </div>
+                        <div>
+                            <span class="indLabel">
+                                <i class='bx bxs-lock-alt'></i>
+                                Security
+                            </span>
+                            <progress value='9' max='10'></progress>
+                            <span class="indValue">9/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="box">
+                    <canvas id="aestheticsChart"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="navigationChart"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="speedChart"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="searchabilityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Charts -->
+    <script src="js/charts.js"></script>
 </body>
 </html>

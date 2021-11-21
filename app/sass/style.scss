@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,12 +7,16 @@
     text-decoration: none;
 }
 
-body{
+body {
     background-color: #F2F2F2;
     
     header {
+        z-index: 999;
+        top: 0;
+        position: fixed;
         height: 86px;
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: flex-end;
         background-color: #34383C;
@@ -25,6 +29,7 @@ body{
                 margin-bottom: 10px;
             }
         }
+        
             
         i {
             color:rgba(255, 255, 255, 0.5);
@@ -56,8 +61,10 @@ body{
     }
    
     .side-bar {
+        z-index: 999;
         width: 132px;
         height: 100%;
+        top: 86px;
         position: fixed;
         text-align: center;
         font-size: 13px;
@@ -93,4 +100,134 @@ body{
         }
     }
 
+    .main {
+        top: 86px;
+        position: relative;
+        left: 132px;
+        width: calc(100% - 132px);
+        font-family: 'Montserrat', sans-serif;
+
+        .top-bar {
+            height: 86px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+            background-color: #FFFF;
+            
+            label {
+                padding: 0 42px;
+                font-size: 32px;
+                font-weight: 500;
+                color: #6C757E;
+            }
+
+            .reportBox {
+                width: 286px;
+                display: flex;
+                padding-left: 25px;
+                align-items: center;
+                justify-content: left;
+                background-color: #FAFAFA;
+                font-size: 24px;
+
+                a {
+                    padding-left: 21px;
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+
+        }
+        
+        .graphContainer {
+            margin: 33px 40px;
+
+            .top {
+                width: 100%;
+                padding-bottom: 33px;
+                display: grid;
+                position: relative;
+                grid-template-columns: 1fr 1fr 3fr;
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 33px 40px;
+
+                :nth-child(3) {
+                    grid-row: span 2;   
+                }
+
+                :nth-child(4) {
+                    grid-column: span 2;   
+                }
+            }
+    
+            .bottom {
+                width: 100%;
+                display: grid;
+                position: relative;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 39px;
+            }
+
+            .box {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background-color: #FFFF;
+                box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+                border-radius: 20px;
+                font-weight: 500;
+                
+                canvas {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .indContainer {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 18px;
+                    padding: 0 12px;
+
+                    div {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        
+                        .indLabel {
+                            width: 296px;
+                            i {
+                                color: #6C757E;
+                                vertical-align: middle;
+                                font-size: 200%;
+                            }
+                        }
+
+                        .indValue {
+                            color: #6C757E;
+                        }
+                            
+                        progress {
+                            width: 100%;
+                            height: 12px;
+                            padding: 0 15px;
+                            -webkit-appearance: none;
+                            &::-webkit-progress-bar {
+                                background: #DDE8ED;
+                            }
+
+                            &::-webkit-progress-value {
+                                background: linear-gradient(left,rgb(240, 76, 56), rgb(77, 207, 168));
+                            }
+                        }              
+                    }
+                }
+            }
+        }
+    }
 }
